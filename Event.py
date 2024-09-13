@@ -64,7 +64,7 @@ class Event:
     
     def parseWebJSON(self, url):
         key = url.split("/")[-1].split(".")[0]
-        self.cache.load(key, url)
+        return self.cache.load(key, url)
 
     def getEvent(self, eventId):
         for event in self.eventData:
